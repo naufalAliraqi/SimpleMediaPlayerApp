@@ -5,31 +5,29 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
-            android:id="@+id/mainvideo"
+            android:id="@+id/mainVideo"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="@dimen/very_larg_image"
             android:scaleType="fitXY"
-            app:layout_constraintTop_toTopOf="parent"
-            ></Constraint>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
-            android:id="@+id/maintext"
+            android:id="@+id/videoText"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/mainvideo"
+            android:layout_height="@dimen/larg_space"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintTop_toBottomOf="@+id/mainVideo"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"></Constraint>
+            android:paddingStart="@dimen/normal_padding" />
 
-        <ImageView
-            android:id="@+id/playarrow"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+        <Constraint
+            android:id="@+id/playArrow"
+            android:layout_width="@dimen/larg_icon"
+            android:layout_height="@dimen/larg_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/mainvideo"
+            app:layout_constraintBottom_toBottomOf="@+id/mainVideo"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            ></ImageView>
+            app:layout_constraintRight_toRightOf="parent" />
 
     </ConstraintSet>
 
@@ -38,33 +36,31 @@
     <ConstraintSet android:id="@+id/end">
 
         <Constraint
-            android:id="@+id/mainvideo"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
+            android:id="@+id/mainVideo"
+            android:layout_width="@dimen/small_image_width"
+            android:layout_height="@dimen/small_image_height"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            ></Constraint>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <Constraint
-            android:id="@+id/maintext"
+            android:id="@+id/videoText"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/small_image_height"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"
-            android:textSize="18sp"
+            android:paddingStart="@dimen/normal_padding"
+            android:textSize="@dimen/normal_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/mainvideo"
-            app:layout_constraintTop_toTopOf="@+id/mainvideo"></Constraint>
+            app:layout_constraintStart_toEndOf="@+id/mainVideo"
+            app:layout_constraintTop_toTopOf="@+id/mainVideo" />
 
         <Constraint
-            android:id="@+id/playarrow"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            app:layout_constraintTop_toTopOf="@+id/maintext"
-            app:layout_constraintBottom_toBottomOf="@+id/maintext"
-            app:layout_constraintEnd_toEndOf="@+id/maintext"
-            android:layout_marginEnd="24dp"
-            ></Constraint>
+            android:id="@+id/playArrow"
+            android:layout_width="@dimen/medium_icon"
+            android:layout_height="@dimen/medium_icon"
+            app:layout_constraintTop_toTopOf="@+id/videoText"
+            app:layout_constraintBottom_toBottomOf="@+id/videoText"
+            app:layout_constraintEnd_toEndOf="@+id/videoText"
+            android:layout_marginEnd="@dimen/larg_margin" />
 
     </ConstraintSet>
 
@@ -72,7 +68,7 @@
         app:constraintSetEnd="@id/end"
         app:constraintSetStart="@+id/start">
         <OnSwipe
-            app:touchAnchorId="@+id/mainvideo"
-            app:dragDirection="dragUp"/>
+            app:touchAnchorId="@+id/mainVideo"
+            app:dragDirection="dragDown"/>
     </Transition>
 </MotionScene>

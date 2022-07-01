@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="larg_space">48dp</dimen>
+    <dimen name="normal_padding">8dp</dimen>
+    <dimen name="normal_text">18sp</dimen>
+    <dimen name="larg_icon">48dp</dimen>
+    <dimen name="very_larg_image">256dp</dimen>
+    <dimen name="small_image_width">96dp</dimen>
+    <dimen name="small_image_height">64dp</dimen>
+    <dimen name="medium_icon">32dp</dimen>
+    <dimen name="larg_margin">24dp</dimen>
+</resources>
